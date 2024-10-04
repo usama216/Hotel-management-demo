@@ -27,6 +27,9 @@ import { FaRegCircleUser } from "react-icons/fa6";
 import SearchIcon from '@mui/icons-material/Search';
 import { useSelector } from "react-redux";
 import ENavLinks from "./ENavLinks";
+import { TbWorld } from "react-icons/tb";
+import { MdKeyboardArrowDown } from "react-icons/md";
+
 
 
 
@@ -86,10 +89,11 @@ const Header = () => {
   const menuItems = [
     // { label: "Home", route: "/" },
     // { label: "Services", route: "/our-products" },
-    { label: "Labe Test", route: "/lab-tests" },
-    { label: "FAQS", route: "/faqs" },
-    { label: "Blogs", route: "/blogs" },
-    { label: "Contact Us", route: "/contactus" },
+    { label: "Solutions", route: "/lab-tests" },
+    { label: "Feactures", route: "/faqs" },
+    { label: "Intigrations", route: "/blogs" },
+    { label: "Pricing", route: "/contactus" },
+    { label: "Resources", route: "/contactus" },
   ];
 const handleHome = ()=>{
   navigate('/')
@@ -102,6 +106,7 @@ const handleCartOpen = ()=>{
   return (
    <>
    <Box sx={{
+    backgroundColor:'#adc9df',  
      width:'100%',
     boxSizing:'border-box',
      overflow:'hidden',
@@ -126,19 +131,23 @@ const handleCartOpen = ()=>{
 
       <Box
         sx={{
-          padding: "0.5rem 5%",
+          padding: "0.5rem 15%",
           color: "black",
           display: "flex",
-          justifyContent: "space-between",
+          // justifyContent: "space-between",
+          gap:'1.5rem',
           alignItems: "center",
         }}
       >
         <FlexBox sx={{ gap: "1rem" }}>
           <Box onClick={handleHome} sx={{cursor:'pointer'}}>
 
-          <Image src="/loginlogo.svg" sx={{
+          {/* <Image src="/loginlogo.svg" sx={{
             width:'4rem'
-          }} />
+          }} /> */}
+         <Typography sx={{fontSize:'2rem'}}>
+         Holiday Hero
+         </Typography>
           </Box>
 
         </FlexBox>
@@ -146,11 +155,11 @@ const handleCartOpen = ()=>{
         <Box
           sx={{
             display: { xs: 'none',sm: "none", md: "flex" },
-            gap: is1200 ? 2 : 6,
+            gap: is1200 ? 2 : 4,
             alignItems: "center",
           }}
         >
-        <Typography onClick={()=>(
+        {/* <Typography onClick={()=>(
           navigate('/')
         )}
         sx={{
@@ -163,10 +172,10 @@ const handleCartOpen = ()=>{
           },
         }}> 
           Home
-        </Typography>
-        <Box sx={{display:'flex'  }}>
+        </Typography> */}
+        {/* <Box sx={{display:'flex'  }}>
           <ENavLinks/>
-        </Box>
+        </Box> */}
           {menuItems.map((item, index) => (
             <Typography
               key={index}
@@ -175,9 +184,9 @@ const handleCartOpen = ()=>{
                 setDrawerOpen(false);
               }}
               sx={{
-                fontSize:  "0.9rem",
+                fontSize:  "1rem",
                 cursor: "pointer",
-                fontWeight:550,
+                fontWeight:400,
                 color: "black",
                 ":hover": {
                   color: theme.palette.primary.main,
@@ -187,10 +196,13 @@ const handleCartOpen = ()=>{
               {item.label}
             </Typography>
           ))}
+          <Box sx={{borderBottom:'2px solid black', py:'0.5rem'}}>
+            <span style={{fontWeight:'500'}}>Log In</span>
+          </Box>
         </Box>
 
         <FlexBox sx={{ display: { xs: 'none',sm: "none", md: "flex", gap: "0.5rem" } }}>
-        <TextField
+        {/* <TextField
         // size="small"
         sx={{
           borderRadius: '50px',
@@ -221,42 +233,34 @@ const handleCartOpen = ()=>{
             </InputAdornment>
           ),
         }}
-      />
-         <Button
-         onClick={handleCartOpen}
-          sx={{ fontWeight:500,
-                color: "black",
-           border:'1px solid darkgray',
-           borderRadius:'50px',
-           padding:'0.5rem 1rem',
-           textTransform:'none'
-         }}>
-          {/* <Badge badgeContent={cartitem.length} color="primary"> */}
-         <IoCartOutline style={{ fontSize: "1.5rem" }} /> Cart
-         {/* </Badge> */}
-         </Button>
+      /> */}
+      
+         
 
 
           <Button
             onClick={handleLogin}
             sx={{
               color: "white",
-              border:'1px solid #265630',
-              backgroundColor:'#265630',
+              border:'1px solid #0c111e',
+              backgroundColor:'#0c111e',
               textTransform: "none",
               fontSize: "0.9rem",
               borderRadius:'50px',
               padding:'0.5rem 1rem',
               '&:hover':{
-                color: "#265630",
-                border:'1px solid #265630',
+                color: "#0c111e",
+                border:'1px solid #0c111e',
                 backgroundColor:'transparent',
               }
             }}
           >
-            <FaRegCircleUser style={{marginRight:'0.5rem', fontSize:'1.2rem'}} />
-            Sign Up
+            start for free
           </Button>
+          <Box sx={{display:'flex', ml:'1rem'}}>
+            <TbWorld/>
+            <MdKeyboardArrowDown/>
+          </Box>
 
           {/* <Box
             sx={{

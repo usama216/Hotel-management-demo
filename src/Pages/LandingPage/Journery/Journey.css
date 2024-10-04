@@ -4,18 +4,19 @@
     padding: 0%;
     box-sizing: border-box;
 }
-.hero-section{
+.hero-sectionj{
     width: 100%;
     /* background-image: url("/HeroImage.png"); */
-    background-color: #adc9df;
+    background-color:white;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     padding: 7% 15%;
     height: auto;
     display: flex;
+    gap: '10rem';
 }
-.hero-section-text{
+.hero-section-textj{
     /* width: 90%; */
     margin-top: 8rem;
     display: flex;
@@ -23,14 +24,14 @@
     justify-content: center;
     padding-right: '4rem';
 }
-.hero-section-text h1{
+.hero-section-textj h1{
     font-size: 4.2rem;
     font-weight: 500;
     color: white;
     margin-bottom: 1.5rem;
     font-family: "roboto";
 }
- .hero-section-text-spam{
+ .hero-section-text-spamj{
     font-weight: 100;
     color: white;
     font-size: 4.2rem;

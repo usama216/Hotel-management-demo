@@ -166,18 +166,40 @@ function Hero() {
         <section className="hero-section">
           <div className="hero-section-text">
             <Typography
-              sx={{ color: "white", fontSize: "3rem", fontWeight: "500" }}
+              sx={{ color: "#0c111e", fontSize: "4rem", fontWeight: "600", lineHeight: "1.1" }}
             >
-              Music For <br /> Everyone
+            The Guest App for Short-Term Rentals & Hotels
             </Typography>
 
-            <Typography sx={{ color: "white", fontSize: "1.2rem" }}>
-              Which course is suitable for you?
+            <Typography sx={{ color: "#7d92a5", fontSize: "1.2rem" }}>
+            Streamline your guest operations, while you monetize your business, get happier guests and gain loyalty
             </Typography>
             <br />
             <Box sx={{ width: isSmall ? "200%" : "50%" }}>
-              {/* <FreeTrialButton/> */}
+            <Button
+            // onClick={handleLogin}
+            sx={{
+              color: "#0c111e",
+              border:'1px solid #e2fe05',
+              backgroundColor:'#e2fe05',
+              textTransform: "none",
+              fontSize: "0.9rem",
+              borderRadius:'50px',
+              padding:'0.5rem 1rem',
+              '&:hover':{
+                color: "#e2fe05",
+                border:'1px solid #e2fe05',
+                backgroundColor:'transparent',
+              }
+            }}
+          >
+            Book a demo
+          </Button>
             </Box>
+
+          </div>
+          <div className="hero-image">
+            <img src="/herocel.avif" alt="" />
           </div>
         </section>
 
