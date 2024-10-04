@@ -104,7 +104,9 @@ arrows:true,
 
 
             <Typography
-              sx={{ fontSize: "3rem", width: "30%", fontWeight: 600,}}
+              sx={{ fontSize: "3rem", width: "30%", fontWeight: 600,
+                textShadow: '10px 20px 70px yellow' 
+              }}
             >
               Discover the benefits
             </Typography>
@@ -118,6 +120,7 @@ arrows:true,
                   borderRadius: "35px",
                   backgroundColor: "black",
                   padding: "0.8rem 1.8rem",
+                  boxShadow:'10px 10px 150px yellow'
                 }}
                 variant="contained"
               >
@@ -127,10 +130,12 @@ arrows:true,
               <Button
                 sx={{
                   borderColor: "black",
+                  backgroundColor:'transparent',
                   color: "black",
                   textTransform: "none",
                   borderRadius: "35px",
                   padding: "0.8rem 1.8rem",
+                  boxShadow:'10px 10px 150px yellow'
                 }}
                 variant="outlined"
               >
