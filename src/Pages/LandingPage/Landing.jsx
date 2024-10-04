@@ -16,6 +16,8 @@ import ValidationForm from "./ValidationForm/ValidationForm";
 import Journey from "./Journery/Journey";
 import Type from "./Type/Type";
 import Customer from "./Customer/Customer";
+import OvoNetwork from "../../components/Footer/OvoNetwork";
+import Hospitility from "./Hospitility";
 
 const Landing = () => {
   const theme = useTheme();
@@ -32,15 +34,19 @@ const Landing = () => {
 
   return (
     <>
-      <Page title="Khatri Brothers Academy">
+      <Page title="Demo for Holiday Hotel">
         <Hero/>
         <Journey/>
         <Type/>
         <Customer/>
-        {/* <Student_testimonials/> */}
-        {/* <Category/> */}
-        {/* <ProductCard/> */}
+
+
+        <Student_testimonials/>
+
+
+        <Hospitility/>
         {/* <ValidationForm/> */}
+        <OvoNetwork/>
       </Page>
     </>
   );

@@ -7,20 +7,40 @@ import "slick-carousel/slick/slick-theme.css";
 import "./Student_testimonials.css";
 import { getPublicTestimonial } from "../../../store/actions/courseActions";
 import { useDispatch } from "react-redux";
-import { Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 
 function Student_testimonials() {
   const base = "https://khatribrothersacademy.com:4545";
   const dispatch = useDispatch();
-  const [publicTestimonial, setPublicTestimonial] = useState([]); // get data form api 
+  const [publicTestimonial, setPublicTestimonial] = useState([]); // get data form api
 
-  // set constant data 
+  // set constant data
   const studentdata = [
-    {img:'/bhajjancourse.png', stuname :'Imran Ashiq'}, 
-    {img:'/bhajjancourse.png', stuname :'Usama Jawad'}, 
-    {img:'/bhajjancourse.png', stuname :'Ahmad Mustafa'}, 
-    {img:'/bhajjancourse.png', stuname :'Adeel Ahmad'}, 
-  ]
+    {
+      img: "/slideimage1.avif",
+      stuname: "Increase guest loyalty",
+      number: "01",
+      desc: "A guest app extends your digital brand experience, builds guest loyalty and increases direct bookings.",
+    },
+    {
+      img: "/slideimage2.avif",
+      stuname: "Earn additional revenue",
+      number: "02",
+      desc: "Promote your offerings through in-app marketing announcements and persuade your guests to spend more. ",
+    },
+    {
+      img: "/slideimage3.avif",
+      stuname: "Save time on guest management",
+      number: "03",
+      desc: "By digitizing common questions, guest will be able to find crucial information on their own, without any involvement from your team.",
+    },
+    {
+      img: "/slideimage4.avif",
+      stuname: "Streamline operations",
+      number: "04",
+      desc: "Connect to your current tech stack without a hassle. From property management systems to smart locks. ",
+    },
+  ];
 
   const settings = {
     className: "center",
@@ -28,24 +48,26 @@ function Student_testimonials() {
     autoplay: true,
     infinite: true,
     centerPadding: "0px",
-    slidesToShow: 3,
+    slidesToShow: 1,
     speed: 800,
     autoplaySpeed: 2000,
-    dots: true,
+    dots: false,
+arrows:true,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+arrows:true,
+          slidesToShow: 1,
           centerMode: false,
-        }
+        },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
           centerMode: false,
-        }
+        },
       },
       {
         breakpoint: 480,
@@ -53,9 +75,9 @@ function Student_testimonials() {
           slidesToShow: 1,
           centerMode: false,
           centerPadding: "10px", // Optional: adjust padding for smaller screens
-        }
-      }
-    ]
+        },
+      },
+    ],
   };
 
   useEffect(() => {
@@ -78,35 +100,95 @@ function Student_testimonials() {
         <></>
       ) : (
         <>
-          <section className="student-testinomials">
-            <h1>Student Testimonials</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa at
-              sunt laboriosam temporibus aspernatur fugiat harum deleniti
-              consectetur consequatur exercitationem?
-            </p>
-          </section>
+          <Box sx={{ padding: "2rem 15%",  }}>
+
+
+            <Typography
+              sx={{ fontSize: "3rem", width: "30%", fontWeight: 600,}}
+            >
+              Discover the benefits
+            </Typography>
+
+            <br />
+            <Box sx={{ display: "flex" }} gap={2}>
+              <Button
+                sx={{
+                  color: "white",
+                  textTransform: "none",
+                  borderRadius: "35px",
+                  backgroundColor: "black",
+                  padding: "0.8rem 1.8rem",
+                }}
+                variant="contained"
+              >
+                Book a demo
+              </Button>
+
+              <Button
+                sx={{
+                  borderColor: "black",
+                  color: "black",
+                  textTransform: "none",
+                  borderRadius: "35px",
+                  padding: "0.8rem 1.8rem",
+                }}
+                variant="outlined"
+              >
+                Pricing
+              </Button>
+            </Box>
+          </Box>
+
           <div className="slider-container">
             <Slider {...settings}>
               {studentdata.map((row) => (
                 <div key={row._id}>
-                  <img
-                    width="98%"
-                    height="250vh"
-                    src={row.img} // get image from contant data 
-                    // src={`${base}${row.video.replace(/ /g, "%20")}`} //get image from api 
-                    alt="Testimonial 1"
-                  />
+                  <Box>
+                    <img
+                      width="30%"
 
-                  {/* <video
-    width='300rem'
-    height='250vh'
-    controls
-    src='/rvideo.mp4' //get video from constant data 
-    src={`${base}${row.video.replace(/ /g, "%20")}`} // get data from api
-    alt="Testimonial 1"/> */}
+                      style={{ height: "20rem" }}
+                      src={row.img}
+                      alt="Testimonial 1"
+                    />
+                  </Box>
 
-                  <Typography sx={{marginTop:'-3rem', marginLeft:'4rem', color:'white', zIndex:'9999999'}}>{row.stuname}</Typography>
+                  <Box
+                    sx={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <Typography
+                      sx={{
+                        fontWeight: "600",
+                        fontSize: "1.3rem",
+                        marginLeft: "4rem",
+                        color: "black",
+                        zIndex: "9999999",
+                      }}
+                    >
+                      {row.stuname}
+                    </Typography>
+
+                    <Typography
+                      sx={{
+                        marginLeft: "4rem",
+                        color: "grey",
+                        fontSize: "1.3rem",
+                        zIndex: "9999999",
+                      }}
+                    >
+                      {row.number}
+                    </Typography>
+                  </Box>
+
+                  <Typography
+                    sx={{
+                      marginLeft: "4rem",
+                      color: "black",
+                      zIndex: "9999999",
+                    }}
+                  >
+                    {row.desc}
+                  </Typography>
                 </div>
               ))}
             </Slider>
