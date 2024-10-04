@@ -13,6 +13,8 @@ import Student_testimonials from "./student_testimonials/Student_testimonials";
 import Category from "./TextCard/Category";
 import ProductCard from "./TextCard/ProductCard";
 import ValidationForm from "./ValidationForm/ValidationForm";
+import OvoNetwork from "../../components/Footer/OvoNetwork";
+import Hospitility from "./Hospitility";
 
 const Landing = () => {
   const theme = useTheme();
@@ -35,7 +37,10 @@ const Landing = () => {
         <Student_testimonials/>
         <Category/>
         <ProductCard/>
-        <ValidationForm/>
+
+        <Hospitility/>
+        {/* <ValidationForm/> */}
+        <OvoNetwork/>
       </Page>
     </>
   );
