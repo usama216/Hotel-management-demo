@@ -11,13 +11,13 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 7% 15%;
+    padding: 5.5% 15%;
     height: auto;
     display: flex;
 }
 .hero-section-text{
     /* width: 90%; */
-    margin-top: 8rem;
+    margin-top: 0rem;
     display: flex;
     flex-direction: column;
     justify-content: center;

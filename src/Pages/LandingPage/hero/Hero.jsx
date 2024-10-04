@@ -166,12 +166,12 @@ function Hero() {
         <section className="hero-section">
           <div className="hero-section-text">
             <Typography
-              sx={{ color: "#0c111e", fontSize: "4rem", fontWeight: "600", lineHeight: "1.1" }}
+              sx={{ color: "#0c111e", fontSize: "4rem", fontWeight: "600", lineHeight: "1.1", width:'80%' }}
             >
             The Guest App for Short-Term Rentals & Hotels
             </Typography>
 
-            <Typography sx={{ color: "#7d92a5", fontSize: "1.2rem" }}>
+            <Typography sx={{ color: "#7d92a5", fontSize: "1.2rem" ,width:'93%' }}>
             Streamline your guest operations, while you monetize your business, get happier guests and gain loyalty
             </Typography>
             <br />
@@ -183,9 +183,10 @@ function Hero() {
               border:'1px solid #e2fe05',
               backgroundColor:'#e2fe05',
               textTransform: "none",
-              fontSize: "0.9rem",
+              fontSize: "1rem",
               borderRadius:'50px',
-              padding:'0.5rem 1rem',
+              padding:'0.8rem 1.5rem',
+              fontWeight:'600',
               '&:hover':{
                 color: "#e2fe05",
                 border:'1px solid #e2fe05',

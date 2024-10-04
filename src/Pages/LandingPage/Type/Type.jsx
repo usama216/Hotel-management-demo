@@ -17,7 +17,7 @@ const  cardlist = [
   return (
     <>
     <Box sx={{p:'4% 15%'}}>
-        <Box>
+        <Box sx={{ml:'2rem'}}>
         <Typography
               sx={{ color: "#0c111e", fontSize: "3rem", fontWeight: "600", lineHeight: "1.1", width: "50%", mb:'2rem' }}
             >

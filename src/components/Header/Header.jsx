@@ -131,7 +131,7 @@ const handleCartOpen = ()=>{
 
       <Box
         sx={{
-          padding: "0.5rem 15%",
+          padding: "1rem 15%",
           color: "black",
           display: "flex",
           // justifyContent: "space-between",
@@ -184,9 +184,9 @@ const handleCartOpen = ()=>{
                 setDrawerOpen(false);
               }}
               sx={{
-                fontSize:  "1rem",
+                fontSize:  "1.1rem",
                 cursor: "pointer",
-                fontWeight:400,
+                fontWeight:450,
                 color: "black",
                 ":hover": {
                   color: theme.palette.primary.main,
@@ -245,9 +245,9 @@ const handleCartOpen = ()=>{
               border:'1px solid #0c111e',
               backgroundColor:'#0c111e',
               textTransform: "none",
-              fontSize: "0.9rem",
+              fontSize: "1.1rem",
               borderRadius:'50px',
-              padding:'0.5rem 1rem',
+              padding:'0.8rem 1.5rem',
               '&:hover':{
                 color: "#0c111e",
                 border:'1px solid #0c111e',
