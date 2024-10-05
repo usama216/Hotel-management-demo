@@ -91,11 +91,11 @@ const Header = () => {
   const menuItems = [
     // { label: "Home", route: "/" },
     // { label: "Services", route: "/our-products" },
-    { label: "Solutions", route: "/lab-tests" },
-    { label: "Feactures", route: "/faqs" },
-    { label: "Intigrations", route: "/blogs" },
-    { label: "Pricing", route: "/contactus" },
-    { label: "Resources", route: "/contactus" },
+    { label: "Solutions", route: "/" },
+    { label: "Feactures", route: "/" },
+    { label: "Intigrations", route: "/" },
+    { label: "Pricing", route: "/" },
+    { label: "Resources", route: "/" },
   ];
 const handleHome = ()=>{
   navigate('/')
