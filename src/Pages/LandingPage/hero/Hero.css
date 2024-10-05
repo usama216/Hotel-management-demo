@@ -47,3 +47,19 @@
     outline: none;
     margin-bottom: 6rem;
 } */
+
+@media(max-width:900px){
+    .hero-section{
+        flex-direction: column;
+    }
+    .hero-section-text h1{
+        font-size:3rem;
+    }
+}
+
+@media(max-width:600px){
+   
+    .hero-section-text h1{
+        font-size:2rem;
+    }
+}

@@ -23,23 +23,25 @@ import { useNavigate } from "react-router";
 
 
 function Journey() {
- 
+  const theme = useTheme();
+  const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMedium = useMediaQuery(theme.breakpoints.down("md"));
  
   return (
     <>
-        <section className="hero-sectionj">
+        <section className="hero-sectionj" style={{display:'flex', flexDirection:isMedium && 'column-reverse'}}>
           
-          <div className="">
-            <img src="/journey.avif" alt="" width={'100%'}/>
+          <div className="" style={{display:'flex', justifyContent:'center'}}>
+            <img src="/journey.avif" alt="" width={isMedium ? '80%':'100%'}/>
           </div>
           <div className="hero-section-textj">
             <Typography
-              sx={{ color: "#0c111e", fontSize: "3.5rem", fontWeight: "600", lineHeight: "1.1" , width:'100%' }}
+              sx={{ color: "#0c111e", fontSize:isSmall ? '1.7rem': isMedium ? '2.5rem': "3.5rem", fontWeight: "600", lineHeight: "1.1" , width:'100%' }}
             >
             Take Full Control of Your Guest Journey
             </Typography>
 
-            <Typography sx={{ color: "#0c111e", fontSize: "1.2rem", width:'100%' }}>
+            <Typography sx={{ color: "#0c111e", fontSize:isSmall ? '1rem': isMedium ? '1.1rem': "1.2rem", width:'100%' }}>
             With our guest experience software, you can digitize and automate all guest interactions beyond the booking. The app becomes your guests’ go-to-guide and their digital concierge that supports them during their stay.
             </Typography>
             <br />

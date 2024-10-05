@@ -35,11 +35,13 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 
 
 const Header = () => {
+  const theme = useTheme();
   const cartitem = useSelector((state)=>state.cartItem)
   const is1200 = useMediaQuery('(max-width:1200px)'); 
+  const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMedium = useMediaQuery(theme.breakpoints.down("md"));
 
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const theme = useTheme();
   const navigate = useNavigate();
   const location = useLocation();
   const [selectedValue, setSelectedValue] = useState("");
@@ -131,10 +133,11 @@ const handleCartOpen = ()=>{
 
       <Box
         sx={{
+          width:'100%',
           padding: "1rem 15%",
           color: "black",
           display: "flex",
-          // justifyContent: "space-between",
+          justifyContent: isMedium && "space-between",
           gap:'1.5rem',
           alignItems: "center",
         }}

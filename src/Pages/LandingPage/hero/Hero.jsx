@@ -43,6 +43,7 @@ function Hero() {
   const [selectedThirdOption, setSelectedThirdOption] = useState("");
   const [availableTimes, setAvailableTimes] = useState([]);
   const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMedium = useMediaQuery(theme.breakpoints.down("md"));
   // Helper function to filter available times
   const filterAvailableTimes = (date) => {
     if (!date) return [];
@@ -165,13 +166,13 @@ function Hero() {
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <section className="hero-section">
           <div className="hero-section-text">
-            <Typography
-              sx={{ color: "#0c111e", fontSize: "4rem", fontWeight: "600", lineHeight: "1.1", width:'80%' }}
+            <Typography 
+              sx={{ color: "#0c111e", fontSize:isSmall ? '2rem': isMedium ? '3rem': "4rem", fontWeight: "600", lineHeight: "1.1", width:'80%' }}
             >
             The Guest App for Short-Term Rentals & Hotels
             </Typography>
 
-            <Typography sx={{ color: "#7d92a5", fontSize: "1.2rem" ,width:'93%' }}>
+            <Typography sx={{ color: "#7d92a5", fontSize:isSmall ? '1rem': isMedium ? '1.1rem': "1.2rem" ,width:'93%' }}>
             Streamline your guest operations, while you monetize your business, get happier guests and gain loyalty
             </Typography>
             <br />
@@ -199,8 +200,8 @@ function Hero() {
             </Box>
 
           </div>
-          <div className="hero-image">
-            <img src="/herocel.avif" alt="" />
+          <div style={{display:'flex', justifyContent:'center'}}>
+            <img src="/herocel.avif" alt="" style={{width: isMedium ? '70%':'100%'}}/>
           </div>
         </section>
 
