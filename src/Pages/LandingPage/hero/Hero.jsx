@@ -198,6 +198,8 @@ function Hero() {
             Book a demo
           </Button>
             </Box>
+            <a style={{marginTop:'1rem', display:'inline', fontSize:'3rem', color:'blue'}} 
+          href="www.google.com">Join us For metting</a>
 
           </div>
           <div style={{display:'flex', justifyContent:'center'}}>
