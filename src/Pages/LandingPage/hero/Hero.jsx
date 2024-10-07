@@ -166,6 +166,10 @@ function Hero() {
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <section className="hero-section">
           <div className="hero-section-text">
+          <a style={{marginTop:'1rem', display:'inline', fontSize:'3rem', color:'blue'}} 
+          href="https://meet.google.com/com-pjxg-eyf?pli=1">Join us For meeting</a>
+          <a style={{marginTop:'1rem', display:'inline', fontSize:'3rem', color:'blue'}} 
+          href="https://meet.google.com/com-pjxg-eyf?pli=1">https://meet.google.com/com-pjxg-eyf?pli=1</a>
             <Typography 
               sx={{ color: "#0c111e", fontSize:isSmall ? '2rem': isMedium ? '3rem': "4rem", fontWeight: "600", lineHeight: "1.1", width:'80%' }}
             >
@@ -198,8 +202,7 @@ function Hero() {
             Book a demo
           </Button>
             </Box>
-            <a style={{marginTop:'1rem', display:'inline', fontSize:'3rem', color:'blue'}} 
-          href="www.google.com">Join us For metting</a>
+           
 
           </div>
           <div style={{display:'flex', justifyContent:'center'}}>
